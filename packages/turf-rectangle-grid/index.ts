@@ -85,7 +85,7 @@ function rectangleGrid<P = Properties>(
             [currentX, currentY],
           ],
         ],
-        options.properties
+        { row, col: column, ...options.properties }
       );
       if (options.mask) {
         if (intersect(options.mask, cellPoly)) {
